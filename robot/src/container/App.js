@@ -1,7 +1,7 @@
 import React, { useState , useMemo } from "react";
-import ChildMessages from "../components/ChildMessages";
 
 import "./App.css";
+
 const App = () => {
   const [messages, setMessages] = useState(0);
 
