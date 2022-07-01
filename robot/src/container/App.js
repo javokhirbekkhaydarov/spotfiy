@@ -5,7 +5,11 @@ import Song from "../components/Song";
 import "./App.css";
 
 const App = () => {
-  return (<Song />), (<Player />);
+  return (
+    <>
+      <Song /> <Player />
+    </>
+  );
 };
 
 export default App;
