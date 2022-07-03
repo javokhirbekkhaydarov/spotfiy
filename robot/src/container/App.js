@@ -46,6 +46,7 @@ const App = () => {
         songs={songs}
         timeUpdateHandler={timeUpdateHandler}
         setCurrentSong={setCurrentSong}
+        setSongs={setSongs}
       />
       <Library
         songs={songs}

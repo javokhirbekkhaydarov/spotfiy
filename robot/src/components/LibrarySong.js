@@ -20,7 +20,7 @@ const LibrarySong = ({
       }
     }
 
-    //Adding State
+    //Adding active State
     const newSongs = songs.map((song) => {
       if (song.id === id) {
         return {
