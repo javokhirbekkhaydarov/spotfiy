@@ -5,12 +5,14 @@ nav {
     align-items: center;
 }
 button {
-    border: 2px solid #ededed;
+    transition: all .2s ease;
+    border: 0;
     background: transparent;
-    padding: 0.5rem .75rem;
+    padding: .75rem 1.5rem;
     cursor: pointer;
+    border-radius: 5px;
+    background: #FF2F56;
     &:hover {
-        background-color: #FF6984;
         color: #fff;
     }
 }
