@@ -1,10 +1,16 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-h1,h2,h3 {
-    color: rgb(206, 201, 201);
+body {
+  font-family: "SF Pro Display", sans-serif;
+}
+h1,
+h2,
+h3 {
+  color: rgb(255, 255, 255);
 }
 @import url(./_player.scss);
 @import url(./_song.scss);
+@import url(./_library.scss);
