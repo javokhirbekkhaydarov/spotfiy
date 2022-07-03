@@ -19,7 +19,7 @@ function chillHop() {
       audio: "https://mp3.chillhop.com/serve.php/?mp3=32865",
       color: ["#C69400", "#9EA89A"],
       id: uuidv4(),
-      active: true,
+      active: false,
     },
     {
       name: "Full Circle ",
