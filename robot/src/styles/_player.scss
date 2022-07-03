@@ -33,3 +33,13 @@
     cursor: pointer;
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  .time-control {
+    width: 95%;
+  }
+  .player-control {
+    width: 50%;
+  }
+}
