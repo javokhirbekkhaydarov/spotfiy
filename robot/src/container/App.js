@@ -9,7 +9,7 @@ const App = () => {
   const [songs, setSongs] = useState(data());
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
- const [libraryStatus, setLibraryStatus] = useState(false)
+  const [libraryStatus, setLibraryStatus] = useState(false);
   // Ref
   const audioRef = useRef(null);
 
@@ -34,7 +34,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Nav  libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus}/>
+      <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
       <Song currentSong={currentSong} />
       <Player
         currentSong={currentSong}
@@ -43,7 +43,9 @@ const App = () => {
         audioRef={audioRef}
         setSongInfo={setSongInfo}
         songInfo={songInfo}
+        songs={songs}
         timeUpdateHandler={timeUpdateHandler}
+        setCurrentSong={setCurrentSong}
       />
       <Library
         songs={songs}
