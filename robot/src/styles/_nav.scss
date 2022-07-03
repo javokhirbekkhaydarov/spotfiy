@@ -1,0 +1,16 @@
+nav {
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+button {
+    border: 2px solid #ededed;
+    background: transparent;
+    padding: 0.5rem .75rem;
+    cursor: pointer;
+    &:hover {
+        background-color: #FF6984;
+        color: #fff;
+    }
+}
