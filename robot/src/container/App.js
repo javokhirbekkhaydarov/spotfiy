@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 import Player from "../components/Player";
 import Song from "../components/Song";
 import "../styles/app.scss";
@@ -6,6 +6,7 @@ import Library from "../components/Library";
 import data from "../data";
 import Nav from "../components/Nav";
 import UseLayoutEffect from "../components/UseLayoutEffect/UseLayoutEffect";
+import "./App.css";
 const App = () => {
   const [songs, setSongs] = useState(data());
   const [currentSong, setCurrentSong] = useState(songs[0]);
@@ -33,36 +34,61 @@ const App = () => {
     duration: 0,
   });
 
+  //!useLayoutEffect Lessons code =>
+  //usestate
+
+  const [bg, setBg] = useState(false);
+  const [randomNumber, setRandomNumber] = useState(0);
+
+  const styles = {
+    background: bg ? "pink" : "#444",
+  };
+
+  //useeffect
+
+  useLayoutEffect(() => {
+    if (randomNumber === 0) {
+      setRandomNumber(Math.floor(Math.random() * 100));
+    }
+  }, [randomNumber]);
   return (
-    (<UseLayoutEffect />),
-    (
-      <div className={`App ${libraryStatus ? "library-active" : ""}`}>
-        <Nav
-          libraryStatus={libraryStatus}
-          setLibraryStatus={setLibraryStatus}
-        />
-        <Song currentSong={currentSong} />
-        <Player
-          currentSong={currentSong}
-          isPlaying={isPlaying}
-          audioRef={audioRef}
-          setIsPlaying={setIsPlaying}
-          setSongInfo={setSongInfo}
-          songInfo={songInfo}
-          timeUpdateHandler={timeUpdateHandler}
-          songs={songs}
-          setCurrentSong={setCurrentSong}
-          setSongs={setSongs}
-        />
-        <Library
-          songs={songs}
-          setCurrentSong={setCurrentSong}
-          isPlaying={isPlaying}
-          setSongs={setSongs}
-          libraryStatus={libraryStatus}
-        />
+    <div className="App">
+      <div style={styles} className="container">
+        <button onClick={() => setBg(!bg)} className="btn-theme"></button>
+        <h1>
+          Random number: <span>{randomNumber}</span>
+        </h1>
+        <button onClick={() => setRandomNumber(0)} className="btn">&gt; random &lt;</button>
       </div>
-    )
+    </div>
+    // (
+    //   <div className={`App ${libraryStatus ? "library-active" : ""}`}>
+    //     <Nav
+    //       libraryStatus={libraryStatus}
+    //       setLibraryStatus={setLibraryStatus}
+    //     />
+    //     <Song currentSong={currentSong} />
+    //     <Player
+    //       currentSong={currentSong}
+    //       isPlaying={isPlaying}
+    //       audioRef={audioRef}
+    //       setIsPlaying={setIsPlaying}
+    //       setSongInfo={setSongInfo}
+    //       songInfo={songInfo}
+    //       timeUpdateHandler={timeUpdateHandler}
+    //       songs={songs}
+    //       setCurrentSong={setCurrentSong}
+    //       setSongs={setSongs}
+    //     />
+    //     <Library
+    //       songs={songs}
+    //       setCurrentSong={setCurrentSong}
+    //       isPlaying={isPlaying}
+    //       setSongs={setSongs}
+    //       libraryStatus={libraryStatus}
+    //     />
+    //   </div>
+    // )
   );
 };
 

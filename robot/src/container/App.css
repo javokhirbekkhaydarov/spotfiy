@@ -1,1 +1,36 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  padding: 0.75rem 1.25rem;
+  position: relative;
+}
+ 
+span {
+  color: crimson;
+}
 
+button {
+  padding: 0.35rem 0.75rem;
+  border: 0;
+  font-size: 1rem;
+  cursor: pointer;  
+  color: #fff;
+  border-radius: 2px;
+  background:crimson;
+}
+
+.btn-theme {
+    display: flex;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: none;
+    background: crimson;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+} 
