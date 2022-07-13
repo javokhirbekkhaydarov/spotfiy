@@ -1,2 +1,2 @@
-# spotfiy clone using react
+# spotfiy clone usedreact
 
