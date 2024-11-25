@@ -5,7 +5,6 @@ import "../styles/app.scss";
 import Library from "../components/Library";
 import data from "../data";
 import Nav from "../components/Nav";
-import UseLayoutEffect from "../components/UseLayoutEffect/UseLayoutEffect";
 import "./App.css";
 const App = () => {
   const [songs, setSongs] = useState(data());
