@@ -4,8 +4,7 @@ function chillHop() {
   return [
     {
       name: "Sunset Vibes",
-      cover:
-        "https://via.placeholder.com/1024x1024.png?text=Sunset+Vibes+Cover",
+      cover: "https://i.scdn.co/image/ab67616d0000b273e1711a91a0feaf0db417b973",
       artist: "DJ Chill",
       audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
       color: ["#FF9F45", "#FC5C65"],
